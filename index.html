@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOABA BROTHERS | Indian Street Food</title>
+  <title>DOABA BROTHERS | Authentic Indian Street Food</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,129 +14,162 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      background: linear-gradient(to right, #fff1e6, #ffe4cc);
       color: #333;
       overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 3rem 1rem;
-      background: #ffb347;
-      color: #fff;
-      background-image: url('https://images.unsplash.com/photo-1627662059910-1070302b8b1d?auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
+      padding: 5rem 2rem;
+      background: url('https://images.unsplash.com/photo-1602016752870-4f011839ba3b?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
       position: relative;
     }
     header::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
     }
-    header h1 {
-      font-size: 3.5rem;
+    header h1, header p {
       position: relative;
       z-index: 1;
+    }
+    header h1 {
+      font-size: 4rem;
       text-shadow: 2px 2px 10px #000;
     }
     header p {
-      font-size: 1.2rem;
-      position: relative;
-      z-index: 1;
+      font-size: 1.5rem;
       margin-top: 1rem;
     }
     section {
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
     h2 {
-      font-size: 2.2rem;
-      color: #e65100;
-      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #d84315;
+      margin-bottom: 2rem;
     }
     .card {
       background: #fff3e0;
       padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card ul {
+      list-style: disc;
+      padding-left: 2rem;
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
       margin-top: 2rem;
     }
     .gallery img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.08);
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 2rem auto;
+      max-width: 300px;
     }
     footer {
-      background: #ff7043;
+      background: #e64a19;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
+    .coming-soon {
+      background: #ffc107;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-up">
     <h1>DOABA BROTHERS</h1>
-    <p>Authentic Indian Street Food | Scarborough</p>
+    <p>Authentic Indian Street Food | 100% Indian Spices | Nothing Frozen</p>
   </header>
 
-  <section>
-    <h2>Welcome to Our Food Truck!</h2>
+  <div class="coming-soon">🍴 Our Food Truck is Coming Soon to Scarborough! Stay Tuned 🍴</div>
+
+  <section data-aos="fade-up">
+    <img src="https://i.imgur.com/LRflcwb.png" alt="Doaba Brothers Logo" class="logo">
+    <h2>Welcome to DOABA BROTHERS</h2>
     <div class="card">
-      <p>Hello! We're <strong>Mridul Sachdeva</strong> and <strong>Ishaan Gupta</strong>, proud founders of <strong>DOABA BROTHERS</strong>. Inspired by the vibrant flavors of Indian street food, we bring the best of chaat, manchurian, noodles, and more right to the heart of Scarborough. Join us on our flavorful journey and experience a burst of India with every bite!</p>
+      <p>We are <strong>Mridul Sachdeva</strong> & <strong>Ishaan Gupta</strong>, brothers with a passion for bold Indian street flavors! Our mission? Deliver mouth-watering, authentic, and freshly made street food — all under $10!</p>
     </div>
   </section>
 
-  <section>
-    <h2>Our Specialties</h2>
+  <section data-aos="fade-up">
+    <h2>Street Food Menu</h2>
     <div class="card">
       <ul>
-        <li>Dry & Gravy Manchurian</li>
+        <li>Dry Manchurian</li>
+        <li>Gravy Manchurian</li>
         <li>Veg Noodles</li>
         <li>Noodle Burger</li>
         <li>Spicy Amritsari Kulcha</li>
-        <li>Masala Dosa with Coconut Chutney</li>
         <li>Pani Puri & Bhel Puri</li>
         <li>Veg Spring Rolls</li>
         <li>Chilli Paneer</li>
-        <li>Fresh Mango Lassi</li>
+        <li>Loaded Cheese Pav Bhaji</li>
+        <li>Mango Lassi & Masala Soda</li>
+        <li>All Dishes Under $10!</li>
       </ul>
     </div>
   </section>
 
-  <section>
+  <section data-aos="fade-up">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1627662059910-1070302b8b1d?auto=format&fit=crop&w=800&q=80" alt="Food Truck">
-      <img src="https://images.unsplash.com/photo-1613145991514-9db7e3a1cbfa?auto=format&fit=crop&w=800&q=80" alt="Street Food">
-      <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Indian Cuisine">
-      <img src="https://images.unsplash.com/photo-1616177603432-7d53298f5d9d?auto=format&fit=crop&w=800&q=80" alt="Serving Dish">
+      <img src="https://i.imgur.com/Iwn6bU8.jpg" alt="Food Truck">
+      <img src="https://i.imgur.com/tLTxmOd.jpg" alt="Manchurian">
+      <img src="https://i.imgur.com/z0M3En3.jpg" alt="Kulcha Plate">
+      <img src="https://i.imgur.com/Z3XxTo2.jpg" alt="Paneer Dish">
+      <img src="https://i.imgur.com/5zA0F3r.jpg" alt="Chaat Plate">
     </div>
   </section>
 
-  <section>
-    <h2>Visit Us</h2>
+  <section data-aos="fade-up">
+    <h2>Follow Us</h2>
     <div class="card">
-      <p>Find us at key Scarborough locations or follow our social media to track the truck! Our aim is to serve with love, spice, and unforgettable flavor.</p>
+      <p>Our truck moves around Scarborough weekly! Follow us to know where we are, what’s on today’s special, and grab your hot plate fresh off the grill!</p>
       <p><strong>Instagram:</strong> @doababrothers</p>
       <p><strong>Email:</strong> doababrothers@gmail.com</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 DOABA BROTHERS | Designed by Mridul & Ishaan</p>
+    <p>&copy; 2025 DOABA BROTHERS | Created by Mridul & Ishaan</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
