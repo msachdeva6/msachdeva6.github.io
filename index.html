@@ -14,14 +14,14 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #fff1e6, #ffe4cc);
+      background: linear-gradient(to right, #ffe9e3, #fff9f3);
       color: #333;
       overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 5rem 2rem;
-      background: url('https://images.unsplash.com/photo-1602016752870-4f011839ba3b?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      padding: 6rem 2rem;
+      background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover no-repeat;
       color: white;
       position: relative;
     }
@@ -53,23 +53,24 @@
     h2 {
       font-size: 2.5rem;
       text-align: center;
-      color: #d84315;
+      color: #c62828;
       margin-bottom: 2rem;
     }
     .card {
-      background: #fff3e0;
+      background: #fffaf0;
       padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
       margin-bottom: 2rem;
       transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
     .card ul {
-      list-style: disc;
+      list-style: square;
       padding-left: 2rem;
+      line-height: 1.8;
     }
     .gallery {
       display: grid;
@@ -82,64 +83,86 @@
       height: 220px;
       object-fit: cover;
       border-radius: 12px;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
     }
     .gallery img:hover {
-      transform: scale(1.08);
+      transform: scale(1.12);
     }
     .logo {
       display: block;
       margin: 0 auto 2rem auto;
-      max-width: 300px;
+      max-width: 280px;
+      border-radius: 50%;
     }
     footer {
-      background: #e64a19;
+      background: #c62828;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
     .coming-soon {
-      background: #ffc107;
+      background: #ff7043;
       color: #fff;
-      padding: 1rem;
+      padding: 1.2rem;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
   </style>
 </head>
 <body>
   <header data-aos="fade-up">
     <h1>DOABA BROTHERS</h1>
-    <p>Authentic Indian Street Food | 100% Indian Spices | Nothing Frozen</p>
+    <p>Authentic Indian Street Food | 100% Indian Spices | Handmade Fresh Daily</p>
   </header>
 
   <div class="coming-soon">🍴 Our Food Truck is Coming Soon to Scarborough! Stay Tuned 🍴</div>
 
   <section data-aos="fade-up">
-    <img src="https://i.imgur.com/LRflcwb.png" alt="Doaba Brothers Logo" class="logo">
+    <img src="https://i.imgur.com/8zHxwlH.png" alt="Doaba Brothers Logo" class="logo">
     <h2>Welcome to DOABA BROTHERS</h2>
     <div class="card">
-      <p>We are <strong>Mridul Sachdeva</strong> & <strong>Ishaan Gupta</strong>, brothers with a passion for bold Indian street flavors! Our mission? Deliver mouth-watering, authentic, and freshly made street food — all under $10!</p>
+      <p>We are <strong>Mridul Sachdeva</strong> & <strong>Ishaan Gupta</strong>, two passionate foodies bringing the heart of India's streets to Scarborough! Our dream is simple: serve delicious, authentic, and handmade Indian street food at prices everyone can enjoy — all under $10!</p>
     </div>
   </section>
 
   <section data-aos="fade-up">
-    <h2>Street Food Menu</h2>
+    <h2>Our Menu</h2>
     <div class="card">
       <ul>
-        <li>Dry Manchurian</li>
-        <li>Gravy Manchurian</li>
-        <li>Veg Noodles</li>
-        <li>Noodle Burger</li>
-        <li>Spicy Amritsari Kulcha</li>
-        <li>Pani Puri & Bhel Puri</li>
-        <li>Veg Spring Rolls</li>
-        <li>Chilli Paneer</li>
-        <li>Loaded Cheese Pav Bhaji</li>
-        <li>Mango Lassi & Masala Soda</li>
-        <li>All Dishes Under $10!</li>
+        <li>Dry Manchurian - $6.99</li>
+        <li>Gravy Manchurian - $7.49</li>
+        <li>Veg Noodles - $5.99</li>
+        <li>Noodle Burger - $6.49</li>
+        <li>Classic Kulcha - $3.99</li>
+        <li>Paneer Kulcha - $4.99</li>
+        <li>Creamy Corn Kulcha - $5.99</li>
+        <li>Nutri Kulcha - $6.99</li>
+        <li>Legend Kulcha - $9.99</li>
+        <li>Veggie Burger - $3.99</li>
+        <li>Aloo Tikki Burger - $5.99</li>
+        <li>Aloo Noodle Burger - $6.99</li>
+        <li>Paneer Burger - $7.99</li>
+        <li>Crispy Burger - $9.99</li>
+        <li>Aloo Tikki Wrap - $7.95</li>
+        <li>Paneer Wrap - $7.99</li>
+        <li>Paneer Tikka Wrap - $8.49</li>
+        <li>Veggie Sandwich - $5.45</li>
+        <li>Corn Sandwich - $5.49</li>
+        <li>Aloo Tikki Sandwich - $6.99</li>
+        <li>Paneer Sandwich - $6.99</li>
+        <li>Masala Tea - $1.99</li>
+        <li>Coffee - $2.49</li>
+        <li>Mint Mojito - $3.49</li>
+        <li>Strawberry Mojito - $3.99</li>
+        <li>Lemon Mojito - $2.99</li>
       </ul>
+      <p><em>All items are prepared fresh daily using authentic Indian spices. Nothing frozen, ever!</em></p>
     </div>
   </section>
 
@@ -157,9 +180,9 @@
   <section data-aos="fade-up">
     <h2>Follow Us</h2>
     <div class="card">
-      <p>Our truck moves around Scarborough weekly! Follow us to know where we are, what’s on today’s special, and grab your hot plate fresh off the grill!</p>
-      <p><strong>Instagram:</strong> @doababrothers</p>
-      <p><strong>Email:</strong> doababrothers@gmail.com</p>
+      <p>We roll through Scarborough every week! Catch our truck, explore our specials, and grab your favorite bite on the go.</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/doababrothers" style="color: #c62828; text-decoration: underline;" target="_blank">@doababrothers</a></p>
+      <p><strong>Email:</strong> <a href="mailto:doababrothers@gmail.com" style="color: #c62828; text-decoration: underline;">doababrothers@gmail.com</a></p>
     </div>
   </section>
 
