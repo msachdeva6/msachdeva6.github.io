@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mridul Sachdeva</title>
+  <title>DOABA BROTHERS | Indian Street Food</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
   <style>
     * {
       margin: 0;
@@ -14,28 +13,39 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      color: #333;
       overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 5rem 1rem;
-      background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
-      backdrop-filter: blur(10px);
+      padding: 3rem 1rem;
+      background: #ffb347;
+      color: #fff;
+      background-image: url('https://images.unsplash.com/photo-1627662059910-1070302b8b1d?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     header h1 {
-      font-size: 4rem;
-      font-weight: 600;
-      text-shadow: 2px 2px 10px #00d2ff;
-      animation: glow 2s infinite alternate;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #00d2ff; }
-      to { text-shadow: 0 0 30px #00d2ff; }
+      font-size: 3.5rem;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 10px #000;
     }
     header p {
       font-size: 1.2rem;
+      position: relative;
+      z-index: 1;
       margin-top: 1rem;
     }
     section {
@@ -44,94 +54,88 @@
       margin: auto;
     }
     h2 {
-      font-size: 2.5rem;
-      border-left: 5px solid #00d2ff;
-      padding-left: 1rem;
-      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      color: #e65100;
+      margin-bottom: 1.5rem;
     }
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: #fff3e0;
       padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
     }
-    ul li {
-      margin: 0.8rem 0;
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
     }
     footer {
+      background: #ff7043;
+      color: white;
       text-align: center;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.3);
-      font-size: 0.9rem;
-      box-shadow: inset 0 1px 5px rgba(255, 255, 255, 0.1);
-    }
-    .wave {
-      position: relative;
-      width: 100%;
-      height: 150px;
-      background: url('https://svgshare.com/i/uVf.svg');
-      background-size: cover;
-      transform: rotate(180deg);
-      margin-top: -150px;
+      padding: 2rem 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Mridul Sachdeva</h1>
-    <p>Based in Toronto, ON</p>
-    <p>Email: manan1009sachdeva@gmail.com | Phone: +1 (647) 553-4813</p>
+    <h1>DOABA BROTHERS</h1>
+    <p>Authentic Indian Street Food | Scarborough</p>
   </header>
 
-  <div class="wave"></div>
-
   <section>
-    <h2>About Me</h2>
-    <div class="card reveal">
-      <p>Hello! I'm Mridul, a curious, motivated, and enthusiastic individual who enjoys learning new things, connecting with people, and embracing challenges. I believe in continuous self-growth, staying grounded, and always looking at life with a positive outlook. Whether it's exploring technology, solving problems, or helping others, I like to approach everything with sincerity and creativity.</p>
+    <h2>Welcome to Our Food Truck!</h2>
+    <div class="card">
+      <p>Hello! We're <strong>Mridul Sachdeva</strong> and <strong>Ishaan Gupta</strong>, proud founders of <strong>DOABA BROTHERS</strong>. Inspired by the vibrant flavors of Indian street food, we bring the best of chaat, manchurian, noodles, and more right to the heart of Scarborough. Join us on our flavorful journey and experience a burst of India with every bite!</p>
     </div>
   </section>
 
   <section>
-    <h2>My Interests</h2>
-    <div class="card reveal">
+    <h2>Our Specialties</h2>
+    <div class="card">
       <ul>
-        <li>Exploring new technology and gadgets</li>
-        <li>Learning about human behavior and psychology</li>
-        <li>Listening to music and discovering new artists</li>
-        <li>Spending time outdoors and going on long walks</li>
-        <li>Helping friends and making genuine connections</li>
-        <li>Photography and capturing everyday beauty</li>
+        <li>Dry & Gravy Manchurian</li>
+        <li>Veg Noodles</li>
+        <li>Noodle Burger</li>
+        <li>Spicy Amritsari Kulcha</li>
+        <li>Masala Dosa with Coconut Chutney</li>
+        <li>Pani Puri & Bhel Puri</li>
+        <li>Veg Spring Rolls</li>
+        <li>Chilli Paneer</li>
+        <li>Fresh Mango Lassi</li>
       </ul>
     </div>
   </section>
 
   <section>
-    <h2>Let's Connect</h2>
-    <div class="card reveal">
-      <p>Thanks for visiting my space! If you'd like to connect, collaborate, or just say hi — feel free to reach out.</p>
-      <p><strong>Email:</strong> manan1009sachdeva@gmail.com</p>
-      <p><strong>Phone:</strong> +1 (647) 553-4813</p>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1627662059910-1070302b8b1d?auto=format&fit=crop&w=800&q=80" alt="Food Truck">
+      <img src="https://images.unsplash.com/photo-1613145991514-9db7e3a1cbfa?auto=format&fit=crop&w=800&q=80" alt="Street Food">
+      <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Indian Cuisine">
+      <img src="https://images.unsplash.com/photo-1616177603432-7d53298f5d9d?auto=format&fit=crop&w=800&q=80" alt="Serving Dish">
+    </div>
+  </section>
+
+  <section>
+    <h2>Visit Us</h2>
+    <div class="card">
+      <p>Find us at key Scarborough locations or follow our social media to track the truck! Our aim is to serve with love, spice, and unforgettable flavor.</p>
+      <p><strong>Instagram:</strong> @doababrothers</p>
+      <p><strong>Email:</strong> doababrothers@gmail.com</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mridul Sachdeva. All rights reserved.</p>
+    <p>&copy; 2025 DOABA BROTHERS | Designed by Mridul & Ishaan</p>
   </footer>
-
-  <script>
-    ScrollReveal().reveal('.reveal', {
-      duration: 1500,
-      origin: 'bottom',
-      distance: '50px',
-      reset: true
-    });
-  </script>
 </body>
 </html>
