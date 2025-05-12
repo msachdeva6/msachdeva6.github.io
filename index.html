@@ -14,14 +14,14 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #ffe9e3, #fff9f3);
-      color: #333;
+      background: #0f0f0f;
+      color: #fff;
       overflow-x: hidden;
     }
     header {
       text-align: center;
       padding: 6rem 2rem;
-      background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1600628422010-711bbfd1e1cd') center/cover no-repeat;
       color: white;
       position: relative;
     }
@@ -30,7 +30,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
       z-index: 0;
     }
     header h1, header p {
@@ -47,30 +47,37 @@
     }
     section {
       padding: 4rem 2rem;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
     h2 {
       font-size: 2.5rem;
       text-align: center;
-      color: #c62828;
+      color: #ffb300;
       margin-bottom: 2rem;
     }
-    .card {
-      background: #fffaf0;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-      margin-bottom: 2rem;
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .menu-item {
+      background: #1c1c1c;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(255, 179, 0, 0.2);
+      text-align: center;
       transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-8px);
+    .menu-item:hover {
+      transform: translateY(-10px);
     }
-    .card ul {
-      list-style: square;
-      padding-left: 2rem;
-      line-height: 1.8;
+    .menu-item h3 {
+      color: #ffb300;
+      margin-bottom: 0.5rem;
+    }
+    .menu-item p {
+      color: #ddd;
     }
     .gallery {
       display: grid;
@@ -88,20 +95,8 @@
     .gallery img:hover {
       transform: scale(1.12);
     }
-    .logo {
-      display: block;
-      margin: 0 auto 2rem auto;
-      max-width: 280px;
-      border-radius: 50%;
-    }
-    footer {
-      background: #c62828;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
     .coming-soon {
-      background: #ff7043;
+      background: #ff6f00;
       color: #fff;
       padding: 1.2rem;
       text-align: center;
@@ -111,7 +106,34 @@
     }
     @keyframes pulse {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
+      50% { opacity: 0.6; }
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .contact-section {
+      background-color: #1a1a1a;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .contact-section h2 {
+      color: #ffb300;
+      margin-bottom: 1.5rem;
+    }
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+    .contact-section a {
+      color: #ffb300;
+      text-decoration: none;
+    }
+    .contact-section a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -124,66 +146,26 @@
   <div class="coming-soon">🍴 Our Food Truck is Coming Soon to Scarborough! Stay Tuned 🍴</div>
 
   <section data-aos="fade-up">
-    <img src="https://i.imgur.com/8zHxwlH.png" alt="Doaba Brothers Logo" class="logo">
-    <h2>Welcome to DOABA BROTHERS</h2>
-    <div class="card">
-      <p>We are <strong>Mridul Sachdeva</strong> & <strong>Ishaan Gupta</strong>, two passionate foodies bringing the heart of India's streets to Scarborough! Our dream is simple: serve delicious, authentic, and handmade Indian street food at prices everyone can enjoy — all under $10!</p>
-    </div>
-  </section>
-
-  <section data-aos="fade-up">
     <h2>Our Menu</h2>
-    <div class="card">
-      <ul>
-        <li>Dry Manchurian - $6.99</li>
-        <li>Gravy Manchurian - $7.49</li>
-        <li>Veg Noodles - $5.99</li>
-        <li>Noodle Burger - $6.49</li>
-        <li>Classic Kulcha - $3.99</li>
-        <li>Paneer Kulcha - $4.99</li>
-        <li>Creamy Corn Kulcha - $5.99</li>
-        <li>Nutri Kulcha - $6.99</li>
-        <li>Legend Kulcha - $9.99</li>
-        <li>Veggie Burger - $3.99</li>
-        <li>Aloo Tikki Burger - $5.99</li>
-        <li>Aloo Noodle Burger - $6.99</li>
-        <li>Paneer Burger - $7.99</li>
-        <li>Crispy Burger - $9.99</li>
-        <li>Aloo Tikki Wrap - $7.95</li>
-        <li>Paneer Wrap - $7.99</li>
-        <li>Paneer Tikka Wrap - $8.49</li>
-        <li>Veggie Sandwich - $5.45</li>
-        <li>Corn Sandwich - $5.49</li>
-        <li>Aloo Tikki Sandwich - $6.99</li>
-        <li>Paneer Sandwich - $6.99</li>
-        <li>Masala Tea - $1.99</li>
-        <li>Coffee - $2.49</li>
-        <li>Mint Mojito - $3.49</li>
-        <li>Strawberry Mojito - $3.99</li>
-        <li>Lemon Mojito - $2.99</li>
-      </ul>
-      <p><em>All items are prepared fresh daily using authentic Indian spices. Nothing frozen, ever!</em></p>
+    <div class="menu-grid">
+      <!-- Menu items here -->
     </div>
+    <p style="text-align:center; margin-top: 2rem;"><em>All items are made fresh with love — nothing frozen, always flavorful!</em></p>
   </section>
 
   <section data-aos="fade-up">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://i.imgur.com/Iwn6bU8.jpg" alt="Food Truck">
-      <img src="https://i.imgur.com/tLTxmOd.jpg" alt="Manchurian">
-      <img src="https://i.imgur.com/z0M3En3.jpg" alt="Kulcha Plate">
-      <img src="https://i.imgur.com/Z3XxTo2.jpg" alt="Paneer Dish">
-      <img src="https://i.imgur.com/5zA0F3r.jpg" alt="Chaat Plate">
+      <!-- Gallery images here -->
     </div>
   </section>
 
-  <section data-aos="fade-up">
-    <h2>Follow Us</h2>
-    <div class="card">
-      <p>We roll through Scarborough every week! Catch our truck, explore our specials, and grab your favorite bite on the go.</p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/doababrothers" style="color: #c62828; text-decoration: underline;" target="_blank">@doababrothers</a></p>
-      <p><strong>Email:</strong> <a href="mailto:doababrothers@gmail.com" style="color: #c62828; text-decoration: underline;">doababrothers@gmail.com</a></p>
-    </div>
+  <section class="contact-section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to know our launch date? Reach out to us!</p>
+    <p>Email: <a href="mailto:doababrothers@gmail.com">doababrothers@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/doaba.brothers/" target="_blank">@doaba.brothers</a></p>
+    <p>Phone: <a href="tel:+16475534813">+1 (647) 553-4813</a></p>
   </section>
 
   <footer>
