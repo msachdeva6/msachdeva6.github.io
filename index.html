@@ -30,7 +30,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.7);  /* Darker black overlay */
       z-index: 0;
     }
     header h1, header p {
@@ -45,6 +45,38 @@
       font-size: 1.5rem;
       margin-top: 1rem;
     }
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 1rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 20px;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #ff6f00;
+      border-radius: 5px;
+    }
+    .coming-soon {
+      background: #ff6f00;
+      color: #fff;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
     section {
       padding: 4rem 2rem;
       max-width: 1200px;
@@ -53,9 +85,10 @@
     h2 {
       font-size: 2.5rem;
       text-align: center;
-      color: #ffb300;
+      color: #d8a700;  /* Warm amber for headings */
       margin-bottom: 2rem;
     }
+    /* Menu Grid */
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -67,18 +100,32 @@
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(255, 179, 0, 0.2);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .menu-item:hover {
       transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(255, 179, 0, 0.4);
     }
     .menu-item h3 {
-      color: #ffb300;
+      color: #d8a700;  /* Warm amber for menu item headings */
       margin-bottom: 0.5rem;
     }
     .menu-item p {
       color: #ddd;
     }
+    /* Menu Titles */
+    .menu-category {
+      background: #333;
+      color: #d8a700;
+      padding: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -95,49 +142,28 @@
     .gallery img:hover {
       transform: scale(1.12);
     }
-    .coming-soon {
-      background: #ff6f00;
-      color: #fff;
-      padding: 1.2rem;
-      text-align: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
-    }
     footer {
       background: #000;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
-    .contact-section {
-      background-color: #1a1a1a;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .contact-section h2 {
-      color: #ffb300;
-      margin-bottom: 1.5rem;
-    }
-    .contact-section p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: #ccc;
-    }
-    .contact-section a {
-      color: #ffb300;
-      text-decoration: none;
-    }
-    .contact-section a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#specials">Specials</a>
+    <a href="#events">Events</a>
+    <a href="#chefs">Chefs</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header Section -->
   <header data-aos="fade-up">
     <h1>DOABA BROTHERS</h1>
     <p>Authentic Indian Street Food | 100% Indian Spices | Handmade Fresh Daily</p>
@@ -145,29 +171,65 @@
 
   <div class="coming-soon">🍴 Our Food Truck is Coming Soon to Scarborough! Stay Tuned 🍴</div>
 
-  <section data-aos="fade-up">
+  <!-- Menu Section -->
+  <section id="menu" data-aos="fade-up">
     <h2>Our Menu</h2>
+
+    <!-- Eatables Section -->
+    <div class="menu-category">Eatables</div>
     <div class="menu-grid">
-      <!-- Menu items here -->
+      <div class="menu-item"><h3>Dry Manchurian</h3><p>$6.99</p></div>
+      <div class="menu-item"><h3>Gravy Manchurian</h3><p>$7.49</p></div>
+      <div class="menu-item"><h3>Veg Noodles</h3><p>$5.99</p></div>
+      <div class="menu-item"><h3>Noodle Burger</h3><p>$6.49</p></div>
+      <div class="menu-item"><h3>Classic Kulcha</h3><p>$3.99</p></div>
+      <div class="menu-item"><h3>Paneer Kulcha</h3><p>$4.99</p></div>
+      <div class="menu-item"><h3>Creamy Corn Kulcha</h3><p>$5.99</p></div>
+      <div class="menu-item"><h3>Nutri Kulcha</h3><p>$6.99</p></div>
+      <div class="menu-item"><h3>Legend Kulcha</h3><p>$9.99</p></div>
+      <div class="menu-item"><h3>Veggie Burger</h3><p>$3.99</p></div>
+      <div class="menu-item"><h3>Aloo Tikki Burger</h3><p>$5.99</p></div>
+      <div class="menu-item"><h3>Aloo Noodle Burger</h3><p>$6.99</p></div>
+      <div class="menu-item"><h3>Paneer Burger</h3><p>$7.99</p></div>
+      <div class="menu-item"><h3>Crispy Burger</h3><p>$9.99</p></div>
+      <div class="menu-item"><h3>Aloo Tikki Wrap</h3><p>$7.95</p></div>
+      <div class="menu-item"><h3>Paneer Wrap</h3><p>$7.99</p></div>
+      <div class="menu-item"><h3>Paneer Tikka Wrap</h3><p>$8.49</p></div>
+      <div class="menu-item"><h3>Veggie Sandwich</h3><p>$5.45</p></div>
+      <div class="menu-item"><h3>Corn Sandwich</h3><p>$5.49</p></div>
+      <div class="menu-item"><h3>Aloo Tikki Sandwich</h3><p>$6.99</p></div>
+      <div class="menu-item"><h3>Paneer Sandwich</h3><p>$6.99</p></div>
     </div>
-    <p style="text-align:center; margin-top: 2rem;"><em>All items are made fresh with love — nothing frozen, always flavorful!</em></p>
+
+    <!-- Drinks Section -->
+    <div class="menu-category">Drinks</div>
+    <div class="menu-grid">
+      <div class="menu-item"><h3>Masala Tea</h3><p>$1.99</p></div>
+      <div class="menu-item"><h3>Indian Coffee</h3><p>$2.49</p></div>
+      <div class="menu-item"><h3>Fresh Mojito</h3><p>$2.99</p></div>
+      <div class="menu-item"><h3>Soft Drink - Coca Cola</h3><p>$1.79</p></div>
+      <div class="menu-item"><h3>Soft Drink - Sprite</h3><p>$1.79</p></div>
+      <div class="menu-item"><h3>Soft Drink - Fanta</h3><p>$1.79</p></div>
+      <div class="menu-item"><h3>Lemon Iced Tea</h3><p>$2.49</p></div>
+      <div class="menu-item"><h3>Pineapple Juice</h3><p>$2.99</p></div>
+      <div class="menu-item"><h3>Ginger Lemon Tea</h3><p>$2.49</p></div>
+      <div class="menu-item"><h3>Mint Lemonade</h3><p>$2.79</p></div>
+    </div>
   </section>
 
-  <section data-aos="fade-up">
+  <!-- Gallery Section -->
+  <section id="gallery" data-aos="fade-up">
     <h2>Gallery</h2>
     <div class="gallery">
-      <!-- Gallery images here -->
+      <img src="https://images.unsplash.com/photo-1605478411600-25cf4bd2e7c2" alt="Food Truck">
+      <img src="https://images.unsplash.com/photo-1657299176980-677a55a9fc0d" alt="Manchurian">
+      <img src="https://images.unsplash.com/photo-1627662056801-d050eedbc247" alt="Kulcha Plate">
+      <img src="https://images.unsplash.com/photo-1600628422010-711bbfd1e1cd" alt="Wrap Dish">
+      <img src="https://images.unsplash.com/photo-1598721671450-c3b6c350bb1d" alt="Street Food">
     </div>
   </section>
 
-  <section class="contact-section" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>Have questions or want to know our launch date? Reach out to us!</p>
-    <p>Email: <a href="mailto:doababrothers@gmail.com">doababrothers@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/doaba.brothers/" target="_blank">@doaba.brothers</a></p>
-    <p>Phone: <a href="tel:+16475534813">+1 (647) 553-4813</a></p>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 DOABA BROTHERS | Created by Mridul & Ishaan</p>
   </footer>
