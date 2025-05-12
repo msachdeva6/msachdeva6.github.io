@@ -51,6 +51,12 @@
       font-size: 4rem;
       text-shadow: 3px 3px 12px rgba(0, 255, 255, 0.5);
       color: #d0e1ff;
+      transform: perspective(500px) translateZ(30px);
+      transition: transform 0.5s ease;
+    }
+
+    header h1:hover {
+      transform: perspective(500px) translateZ(50px);
     }
 
     header p {
@@ -104,6 +110,12 @@
       color: #a6e1fa;
       margin-bottom: 2rem;
       text-shadow: 2px 2px 12px rgba(0,255,255,0.2);
+      transform: perspective(500px) translateZ(30px);
+      transition: transform 0.5s ease;
+    }
+
+    h2:hover {
+      transform: perspective(500px) translateZ(50px);
     }
 
     .menu-category {
@@ -157,9 +169,23 @@
       font-size: 1.3rem;
       box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
     }
+
+    /* Logo */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 120px;
+      height: auto;
+      z-index: 10;
+    }
+
   </style>
 </head>
 <body>
+
+  <!-- Logo -->
+  <img src="b98afc6a-3ba5-4a40-a230-4ecc372cc8bd.png" alt="Desi Zaika Express Logo" class="logo">
 
   <!-- Background Name -->
   <div class="bg-name">Desi Zaika Express</div>
@@ -194,11 +220,11 @@
     <div class="menu-category">
       <h3 style="text-align:center; color:#9be3ff;">Special Offers</h3>
       <div class="menu-grid">
+        <div class="menu-item"><h3>Gol Gappe - $3.99</h3></div>
         <div class="menu-item"><h3>Steamed Momos - $5.99</h3></div>
         <div class="menu-item"><h3>Crispy Crunchy Momos - $6.99</h3></div>
         <div class="menu-item"><h3>Veggie Hotdog - $4.99</h3></div>
         <div class="menu-item"><h3>Paneer Hotdog - $5.49</h3></div>
-        <div class="menu-item"><h3>Gol Gappe - $3.99</h3></div>
       </div>
     </div>
 
