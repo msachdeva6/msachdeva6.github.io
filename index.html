@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOABA BROTHERS | Authentic Indian Street Food</title>
+  <title>Truck-e-Tandoor | Authentic Indian Street Food Truck</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
@@ -14,14 +14,14 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #121212;
-      color: white;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a2e);
+      color: #fff;
       overflow-x: hidden;
     }
     header {
       text-align: center;
       padding: 6rem 2rem;
-      background: #002f6c;
+      background: url('https://images.unsplash.com/photo-1600628422010-711bbfd1e1cd') center/cover no-repeat;
       color: white;
       position: relative;
     }
@@ -30,7 +30,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0,0,0,0.6);
       z-index: 0;
     }
     header h1, header p {
@@ -39,30 +39,29 @@
     }
     header h1 {
       font-size: 4rem;
-      text-shadow: 2px 2px 10px #000;
+      text-shadow: 2px 2px 10px #002b80;
     }
     header p {
       font-size: 1.5rem;
       margin-top: 1rem;
     }
-    /* Navigation Bar */
     nav {
+      background: #000d1a;
       display: flex;
       justify-content: center;
-      background: #1a1a1a;
-      padding: 1rem 0;
+      gap: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
     }
     nav a {
+      color: #00bfff;
       text-decoration: none;
-      color: white;
-      margin: 0 20px;
-      font-size: 1.2rem;
-      padding: 0.5rem 1rem;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      transition: 0.3s;
     }
     nav a:hover {
-      background: #0066cc;
-      border-radius: 5px;
+      color: #66ccff;
+      text-shadow: 0 0 10px #00bfff;
     }
     section {
       padding: 4rem 2rem;
@@ -72,84 +71,65 @@
     h2 {
       font-size: 2.5rem;
       text-align: center;
-      color: #0066cc;
+      color: #66ccff;
       margin-bottom: 2rem;
+      text-shadow: 1px 1px 5px #001f3f;
     }
-    /* Menu Grid */
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
     }
     .menu-item {
-      background: #1e1e1e;
+      background: #121212;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 191, 255, 0.2);
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
     .menu-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 40px rgba(0, 102, 204, 0.4);
+      transform: scale(1.05);
     }
     .menu-item h3 {
-      color: #0066cc;
+      color: #00bfff;
       margin-bottom: 0.5rem;
     }
     .menu-item p {
-      color: #ddd;
+      color: #ccc;
     }
-    /* Menu Categories */
-    .menu-category {
-      background: #1a1a1a;
-      color: #0066cc;
-      padding: 1rem;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      border-radius: 8px;
-      text-align: center;
-    }
-    /* About Us Section */
-    .about-us {
-      background: #002f6c;
-      color: white;
-      padding: 3rem 2rem;
-      margin-top: 4rem;
-      text-align: center;
-      border-radius: 8px;
-    }
-    .about-us h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .about-us p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
-    .about-us .contact-info {
-      font-size: 1rem;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
-      color: #d8a700;
     }
-    .order-btn {
-      background: #0066cc;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
+    }
+    .gallery img:hover {
+      transform: scale(1.12);
+    }
+    .coming-soon {
+      background: #004080;
+      color: #fff;
+      padding: 1.2rem;
       text-align: center;
-      transition: background 0.3s ease;
+      font-size: 1.3rem;
+      font-weight: bold;
+      animation: pulse 2s infinite;
     }
-    .order-btn:hover {
-      background: #004b99;
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
     footer {
-      background: #121212;
+      background: #000;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -157,106 +137,31 @@
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#menu">Menu</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Header Section -->
   <header data-aos="fade-up">
-    <h1>DOABA BROTHERS</h1>
-    <p>Authentic Indian Street Food | 100% Indian Spices | Handmade Fresh Daily</p>
+    <h1>Truck-e-Tandoor</h1>
+    <p>Serving Authentic Indian Street Food Since 2015 – Now On Wheels in Canada!</p>
   </header>
 
-  <!-- About Us Section -->
-  <section id="about" class="about-us">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#specials">Specials</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a href="#order">Order</a>
+  </nav>
+
+  <div class="coming-soon">🚚 Our Food Truck is Rolling Into Scarborough Soon! 🚚</div>
+
+  <section id="about" data-aos="fade-up">
     <h2>About Us</h2>
-    <p>Welcome to DOABA BROTHERS! We have been serving authentic Indian street food in India for over 10 years. Now, we are excited to bring our delicious flavors to Scarborough! Our goal is to provide high-quality, fresh, and flavorful dishes made from the best ingredients and spices.</p>
-    <div class="contact-info">
-      <p>Contact Us: <br>
-      Email: <a href="mailto:support@doababrothers.ca">support@doababrothers.ca</a> <br>
-      Website: <a href="http://www.doababrothers.ca" target="_blank">www.doababrothers.ca</a></p>
-    </div>
+    <p style="text-align:center; max-width:800px; margin:auto; color:#ccc">
+      Truck-e-Tandoor is your go-to destination for delicious, authentic Indian street food. With a legacy of serving mouthwatering dishes across India for over 10 years, we’re now bringing that same love and flavor to the streets of Scarborough. From sizzling tandoori wraps to street-style chaats, our truck brings the taste of Indian hometowns to your neighborhood.
+    </p>
+    <p style="text-align:center; margin-top:1rem; color:#66ccff">Visit us or order online: <strong>www.doababrothers.ca</strong> | Email: <strong>support@doababrothers.ca</strong></p>
   </section>
-
-  <!-- Menu Section -->
-  <section id="menu" data-aos="fade-up">
-    <h2>Our Menu</h2>
-
-    <!-- Eatables Section -->
-    <div class="menu-category">Eatables</div>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <h3>Dry Manchurian</h3>
-        <p>$6.99</p>
-        <img src="https://images.unsplash.com/photo-1605478411600-25cf4bd2e7c2" alt="Dry Manchurian">
-      </div>
-      <div class="menu-item">
-        <h3>Gravy Manchurian</h3>
-        <p>$7.49</p>
-        <img src="https://images.unsplash.com/photo-1616086595775-6fce063a7a44" alt="Gravy Manchurian">
-      </div>
-      <div class="menu-item">
-        <h3>Veg Noodles</h3>
-        <p>$5.99</p>
-        <img src="https://images.unsplash.com/photo-1593603947105-70c5174bdfb1" alt="Veg Noodles">
-      </div>
-      <div class="menu-item">
-        <h3>Noodle Burger</h3>
-        <p>$6.49</p>
-        <img src="https://images.unsplash.com/photo-1616164924089-4337cb3d3062" alt="Noodle Burger">
-      </div>
-      <div class="menu-item">
-        <h3>Classic Kulcha</h3>
-        <p>$3.99</p>
-        <img src="https://images.unsplash.com/photo-1625887025063-8507d2000621" alt="Classic Kulcha">
-      </div>
-      <div class="menu-item">
-        <h3>Paneer Kulcha</h3>
-        <p>$4.99</p>
-        <img src="https://images.unsplash.com/photo-1605506071793-497024246d0e" alt="Paneer Kulcha">
-      </div>
-    </div>
-
-    <!-- Drinks Section -->
-    <div class="menu-category">Drinks</div>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <h3>Masala Tea</h3>
-        <p>$1.99</p>
-        <img src="https://images.unsplash.com/photo-1587432230870-d423fdc91c29" alt="Masala Tea">
-      </div>
-      <div class="menu-item">
-        <h3>Indian Coffee</h3>
-        <p>$2.49</p>
-        <img src="https://images.unsplash.com/photo-1616652657545-c78165f3a4cf" alt="Indian Coffee">
-      </div>
-      <div class="menu-item">
-        <h3>Fresh Mojito</h3>
-        <p>$2.99</p>
-        <img src="https://images.unsplash.com/photo-1574242171816-7a4c634d4fdb" alt="Mojito">
-      </div>
-      <div class="menu-item">
-        <h3>Soft Drink - Coca Cola</h3>
-        <p>$1.79</p>
-        <img src="https://images.unsplash.com/photo-1589263109827-cd54729eb7c9" alt="Coca Cola">
-      </div>
-    </div>
-
-    <!-- Order Online Button -->
-    <div class="text-center">
-      <button class="order-btn" onclick="window.location.href='https://example.com/order'">Order Online</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 DOABA BROTHERS | Created by Mridul & Ishaan</p>
-  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
