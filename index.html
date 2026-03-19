@@ -252,7 +252,7 @@
     <h2>The Visionary</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
       <div class="menu-item" style="padding: 0; overflow: hidden; height: 400px; display: flex; align-items: center; justify-content: center; background: #111;">
-        <span style="color: #444;">[ Owner Photo Placeholder ]</span>
+        <img src="mridul.png.jpg" alt="Mridul Sachdeva" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div>
         <h3 style="font-size: 2rem; margin-bottom: 20px;">Mridul Sachdeva</h3>
@@ -288,11 +288,11 @@
     <div class="menu-category" data-aos="fade-up">
       <div class="cat-header">Momo Station</div>
       <div class="menu-grid">
-        <div class="menu-item" data-tilt><h3>Steamed Momos</h3><p class="price">$9.99</p></div>
-        <div class="menu-item" data-tilt><h3>Crispy Crunchy Momos</h3><p class="price">$11.49</p></div>
+        <div class="menu-item" data-tilt><h3>Steamed Momo</h3><p class="price">$9.99</p></div>
+        <div class="menu-item" data-tilt><h3>Crispy Crunchy Momo</h3><p class="price">$11.49</p></div>
         <div class="menu-item" data-tilt>
             <div class="tag">HOT</div>
-            <h3>Chilli Momos</h3><p class="price">$12.99 <span class="spice">🌶️🌶️🌶️</span></p>
+            <h3>Chilli Momo</h3><p class="price">$12.99 <span class="spice">🌶️🌶️🌶️</span></p>
         </div>
       </div>
     </div>
@@ -320,11 +320,11 @@
     <h2>What Scarborough Thinks</h2>
     <div class="menu-grid">
       <div class="review-card" data-aos="fade-right">
-        "Mridul's Kulchas are the most authentic I've found in the GTA. The spice levels are perfect!"
+        "Mridul's Kulcha are the most authentic I've found in the GTA. The spice levels are perfect!"
         <p style="margin-top: 20px; color: var(--gold); font-weight: 600;">- Rahul K.</p>
       </div>
       <div class="review-card" data-aos="fade-up">
-        "Crispy Momos are a MUST. Great service and very clean food truck."
+        "Crispy Momo are a MUST. Great service and very clean food truck."
         <p style="margin-top: 20px; color: var(--gold); font-weight: 600;">- Sarah M.</p>
       </div>
       <div class="review-card" data-aos="fade-left">
@@ -355,7 +355,6 @@
   <script>
     AOS.init({ duration: 1000, once: true });
     
-    // Smooth scroll offset adjustment
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -364,7 +363,6 @@
         });
     });
 
-    // 3D Tilt Init
     VanillaTilt.init(document.querySelectorAll(".menu-item"), {
       max: 10,
       speed: 400,
