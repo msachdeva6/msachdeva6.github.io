@@ -3,203 +3,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desi Zaika Express</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <title>Desi Zaika Express | Authentic Indian Street Food</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  
   <style>
+    :root {
+      --primary: #4e54c8;
+      --accent: #00d2ff;
+      --glass: rgba(255, 255, 255, 0.07);
+      --glass-border: rgba(255, 255, 255, 0.15);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #f1f1f1;
-      position: relative;
+      background: radial-gradient(circle at top, #1a2a6c, #b21f1f, #fdbb2d);
+      background-attachment: fixed;
+      background-size: cover;
+      color: #ffffff;
       overflow-x: hidden;
     }
 
-    /* Background Name */
+    /* Floating Background Text */
     .bg-name {
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(-20deg);
-      font-size: 12rem;
-      font-weight: 800;
-      color: rgba(255, 255, 255, 0.05);
-      text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.15);
-      z-index: 0;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      font-size: clamp(5rem, 15vw, 12rem);
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.03);
+      z-index: -1;
       pointer-events: none;
-      user-select: none;
       white-space: nowrap;
+      text-transform: uppercase;
     }
 
-    header {
-      text-align: center;
-      padding: 6rem 2rem;
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
-      color: white;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-
-    header h1 {
-      font-size: 4rem;
-      text-shadow: 3px 3px 12px rgba(0, 255, 255, 0.5);
-      color: #d0e1ff;
-      transform: perspective(500px) translateZ(30px);
-      transition: transform 0.5s ease;
-    }
-
-    header h1:hover {
-      transform: perspective(500px) translateZ(50px);
-    }
-
-    header p {
-      font-size: 1.8rem;
-      margin-top: 1rem;
-      text-shadow: 2px 2px 10px #8f94fb;
-      letter-spacing: 1px;
-      font-weight: bold;
-      color: #f0f8ff;
-    }
-
+    /* Modern Floating Nav */
     nav {
-      background: #1c1c1e;
+      position: fixed;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      padding: 0.8rem 2.5rem;
+      border-radius: 50px;
+      z-index: 1000;
+      border: 1px solid var(--glass-border);
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      gap: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
     nav a {
-      color: #d6f0ff;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       transition: 0.3s;
-      background: rgba(255, 255, 255, 0.05);
+      opacity: 0.8;
     }
 
     nav a:hover {
-      color: #ffffff;
-      background: #5b86e5;
-      box-shadow: 0 0 10px #6dd5fa;
+      opacity: 1;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    header {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: transparent;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      background: linear-gradient(to bottom, #ffffff, #84d9f2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+    }
+
+    .owner-badge {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #ffde59;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      opacity: 0.8;
+    }
+
+    .coming-soon {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      padding: 1.2rem;
+      text-align: center;
+      font-weight: 600;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+      color: #ffde59;
+      letter-spacing: 1px;
     }
 
     section {
-      padding: 4rem 2rem;
+      padding: 100px 20px;
       max-width: 1200px;
       margin: auto;
-      position: relative;
-      z-index: 1;
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
       text-align: center;
-      color: #a6e1fa;
-      margin-bottom: 2rem;
-      text-shadow: 2px 2px 12px rgba(0,255,255,0.2);
-      transform: perspective(500px) translateZ(30px);
-      transition: transform 0.5s ease;
-    }
-
-    h2:hover {
-      transform: perspective(500px) translateZ(50px);
-    }
-
-    .menu-category {
       margin-bottom: 3rem;
+      color: #fff;
+    }
+
+    /* 3D Glass Menu Items */
+    .menu-category {
+      margin-bottom: 5rem;
+    }
+
+    .category-title {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 15px;
     }
 
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
     }
 
     .menu-item {
-      background: linear-gradient(135deg, #304352, #d7d2cc);
-      padding: 1.5rem;
-      border-radius: 12px;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      padding: 2.5rem 1.5rem;
+      border-radius: 24px;
       text-align: center;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.1);
-      color: #112;
+      transition: all 0.3s ease;
       transform-style: preserve-3d;
-      perspective: 1000px;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-8px) rotateY(3deg);
-      box-shadow: 0 15px 35px rgba(0, 255, 255, 0.3);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
 
     .menu-item h3 {
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #fff;
     }
 
-    .menu-item p {
-      color: #333;
+    .menu-item:hover {
+      border-color: var(--accent);
+    }
+
+    .price {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffde59;
+      margin-top: 10px;
+    }
+
+    .logo {
+      position: fixed;
+      top: 15px;
+      left: 30px;
+      width: 80px;
+      z-index: 1001;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
     }
 
     footer {
-      background: #1a1a1a;
-      color: #ccc;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.85);
       text-align: center;
-      padding: 2rem 1rem;
+      border-top: 1px solid var(--glass-border);
     }
 
-    .coming-soon {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1f1f2e;
-      color: #a0e9ff;
-      font-size: 1.3rem;
-      box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+    .footer-owner {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-top: 10px;
+      text-transform: uppercase;
     }
 
-    /* 3D Floating Logo */
-    .logo {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 120px;
-      height: auto;
-      z-index: 10;
-      transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: perspective(1000px) rotateX(20deg) rotateY(20deg);
-      box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+    @media (max-width: 768px) {
+      nav {
+        bottom: 20px;
+        top: auto;
+        width: 95%;
+        gap: 1rem;
+        padding: 0.8rem 1rem;
+      }
+      nav a { font-size: 0.8rem; }
+      .logo { left: 50%; transform: translateX(-50%); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
-  <img src="whatsapp.png.jpg" alt="Desi Zaika Express Logo" class="logo">
-
-  <!-- Background Name -->
-  <div class="bg-name">Desi Zaika Express</div>
-
-  <header>
-    <h1>Desi Zaika Express</h1>
-    <p>Indulge in Authentic Indian Street Food – Now On Wheels Across Canada! <br><span style="font-size:1.2rem;">Serving You Since 2015</span></p>
-  </header>
+  <img src="whatsapp.png.jpg" alt="Logo" class="logo">
+  <div class="bg-name">Desi Zaika</div>
 
   <nav>
     <a href="#about">About</a>
@@ -207,96 +242,82 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="coming-soon">🚚 Our Food Truck is Rolling Into Scarborough Soon! 🚚</div>
+  <header data-aos="zoom-out" data-aos-duration="1500">
+    <h1>Desi Zaika Express</h1>
+    <div class="owner-badge" data-aos="fade-up" data-aos-delay="500">Founded by Mridul Sachdeva</div>
+    <p>Authentic Indian Street Food. Rooted in Tradition, Rolling in Canada.</p>
+  </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="text-align:center; max-width:800px; margin:auto; color:#cdefff">
-      Desi Zaika Express brings the heart of Indian street food to the streets of Scarborough. With 10+ years of culinary passion rooted in India, our food truck now delivers the same vibrant flavors to Canada – with a twist of nostalgia and a splash of spice.
-    </p>
-    <p style="text-align:center; margin-top:1rem; color:#91dfff">
-      Visit us or order online: <strong><a href="#" style="color:#84d9f2;">www.desizaikaexpress.ca</a></strong> |
-      Email: <strong><a href="mailto:info@desizaikaexpress.ca" style="color:#84d9f2;">info@desizaikaexpress.ca</a></strong>
+  <div class="coming-soon">
+    🚚 Rolling into Scarborough Soon! Get Ready for the Crunch.
+  </div>
+
+  <section id="about" data-aos="fade-up">
+    <h2>Our Story</h2>
+    <p style="text-align:center; line-height: 2; max-width: 850px; margin: auto; font-size: 1.15rem; color: #e0e0e0;">
+      Led by <strong>Mridul Sachdeva</strong>, Desi Zaika Express brings over a decade of culinary passion from the heart of India to the streets of Scarborough. We specialize in bringing the nostalgic, vibrant flavors of Indian "Galis" to Canada—where every spice blend is handcrafted and every bite tells a story.
     </p>
   </section>
 
   <section id="menu">
-    <h2>Our Menu</h2>
+    <h2 data-aos="fade-up">The Menu</h2>
+
+    <div class="menu-category" data-aos="fade-up">
+      <h3 class="category-title">Signature Specials</h3>
+      <div class="menu-grid">
+        <div class="menu-item" data-tilt><h3>Gol Gappe</h3><span class="price">$3.99</span></div>
+        <div class="menu-item" data-tilt><h3>Steamed Momos</h3><span class="price">$5.99</span></div>
+        <div class="menu-item" data-tilt><h3>Crispy Crunchy Momos</h3><span class="price">$6.99</span></div>
+      </div>
+    </div>
+
+    <div class="menu-category" data-aos="fade-up">
+      <h3 class="category-title">Legendary Kulchas</h3>
+      <div class="menu-grid">
+        <div class="menu-item" data-tilt><h3>Paneer Kulcha</h3><span class="price">$4.99</span></div>
+        <div class="menu-item" data-tilt><h3>Nutri Kulcha</h3><span class="price">$6.99</span></div>
+        <div class="menu-item" data-tilt><h3>Legend Kulcha</h3><span class="price">$9.99</span></div>
+      </div>
+    </div>
     
-    <div class="menu-category">
-      <h3 style="text-align:center; color:#9be3ff;">Special Offers</h3>
-      <div class="menu-grid">
-        <div class="menu-item"><h3>Gol Gappe - $3.99</h3></div>
-        <div class="menu-item"><h3>Steamed Momos - $5.99</h3></div>
-        <div class="menu-item"><h3>Crispy Crunchy Momos - $6.99</h3></div>
-        <div class="menu-item"><h3>Veggie Hotdog - $4.99</h3></div>
-        <div class="menu-item"><h3>Paneer Hotdog - $5.49</h3></div>
+    <div class="menu-category" data-aos="fade-up">
+        <h3 class="category-title">Refreshments</h3>
+        <div class="menu-grid">
+          <div class="menu-item" data-tilt><h3>Masala Tea</h3><span class="price">$1.99</span></div>
+          <div class="menu-item" data-tilt><h3>Fresh Mojito</h3><span class="price">$2.99</span></div>
+        </div>
       </div>
-    </div>
-
-    <div class="menu-category">
-      <h3 style="text-align:center; color:#9be3ff;">Kulchas</h3>
-      <div class="menu-grid">
-        <div class="menu-item"><h3>Classic Kulcha - $3.99</h3></div>
-        <div class="menu-item"><h3>Paneer Kulcha - $4.99</h3></div>
-        <div class="menu-item"><h3>Creamy Corn Kulcha - $5.99</h3></div>
-        <div class="menu-item"><h3>Nutri Kulcha - $6.99</h3></div>
-        <div class="menu-item"><h3>Legend Kulcha - $9.99</h3></div>
-      </div>
-    </div>
-
-    <div class="menu-category">
-      <h3 style="text-align:center; color:#9be3ff;">Burgers</h3>
-      <div class="menu-grid">
-        <div class="menu-item"><h3>Veggie Burger - $3.99</h3></div>
-        <div class="menu-item"><h3>Aloo Tikki Burger - $5.99</h3></div>
-        <div class="menu-item"><h3>Aloo Noodle Burger - $6.99</h3></div>
-        <div class="menu-item"><h3>Paneer Burger - $7.99</h3></div>
-        <div class="menu-item"><h3>Crispy Burger - $9.99</h3></div>
-      </div>
-    </div>
-
-    <div class="menu-category">
-      <h3 style="text-align:center; color:#9be3ff;">Wraps</h3>
-      <div class="menu-grid">
-        <div class="menu-item"><h3>Aloo Tikki Wrap - $7.95</h3></div>
-        <div class="menu-item"><h3>Paneer Wrap - $7.99</h3></div>
-        <div class="menu-item"><h3>Paneer Tikka Wrap - $8.49</h3></div>
-      </div>
-    </div>
-
-    <div class="menu-category">
-      <h3 style="text-align:center; color:#9be3ff;">Sandwiches</h3>
-      <div class="menu-grid">
-        <div class="menu-item"><h3>Veggie Sandwich - $5.45</h3></div>
-        <div class="menu-item"><h3>Corn Sandwich - $5.49</h3></div>
-        <div class="menu-item"><h3>Aloo Tikki Sandwich - $6.99</h3></div>
-        <div class="menu-item"><h3>Paneer Sandwich - $6.99</h3></div>
-      </div>
-    </div>
-
-    <div class="menu-category">
-      <h3 style="text-align:center; color:#9be3ff;">Beverages</h3>
-      <div class="menu-grid">
-        <div class="menu-item"><h3>Masala Tea - $1.99</h3></div>
-        <div class="menu-item"><h3>Indian Coffee - $2.49</h3></div>
-        <div class="menu-item"><h3>Fresh Mojito - $2.99</h3></div>
-        <div class="menu-item"><h3>Soft Drink (Coca Cola) - $1.75</h3></div>
-      </div>
-    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p style="text-align:center; color:#cceeff">📞 +1 647-553-4813 | ✉️ info@desizaikaexpress.ca</p>
+  <section id="contact" data-aos="flip-up">
+    <h2>Get In Touch</h2>
+    <div style="background: var(--glass); padding: 3rem; border-radius: 40px; text-align: center; border: 1px solid var(--glass-border); backdrop-filter: blur(10px);">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff;">📞 +1 647-553-4813</p>
+        <p style="color: #ccc;">✉️ info@desizaikaexpress.ca</p>
+        <p style="margin-top: 2rem; color: var(--accent); font-weight: bold;">Catering Inquiries: Ask for Mridul</p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Desi Zaika Express. All rights reserved.</p>
+    <p>&copy; 2026 Desi Zaika Express.</p>
+    <p class="footer-owner">A Mridul Sachdeva Venture</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script>
+    // Initialize Animations
+    AOS.init({ duration: 1000, once: true });
+    
+    // Initialize 3D Tilt
+    VanillaTilt.init(document.querySelectorAll(".menu-item"), {
+      max: 12,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+      perspective: 1000,
+    });
+  </script>
 
 </body>
 </html>
